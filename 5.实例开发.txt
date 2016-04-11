@@ -1,0 +1,34 @@
+1.步骤
+	-确定目标
+	-分析目标
+		-url格式
+		-数据格式
+		-网页编码
+	-编写代码
+	-执行爬虫
+	
+	*目标：百度百科Python词条相关词条网页-标题和简介
+	*入口页：http://baike.baidu.com/view/21087.htm
+	*url格式：
+		-词条页面url:/view/125370.htm
+	*数据格式：
+		-标题：
+			*<dd class="lemmaWgt-lemmaTitle-title"><h1>***</h1></dd>
+		-简介：
+			*<div class="lemma-summary">***</div>
+	
+2.调度代码
+	-创建spider_main当作总调度程序
+	-创建url_manage.py当作url管理器
+	-创建html_download.py当作网页下载器
+	-创建html_parser.py当作网页解析器
+	-创建html_output.py当作页面显示
+	
+	
+	
+	
+	
+	
+	
+	
+	

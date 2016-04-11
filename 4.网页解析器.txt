@@ -1,0 +1,64 @@
+网页解析器：从网页中获取有价值数据的工具
+	-输入HTML网页字符串
+	-网页解析器
+	-价值数据
+	-新URL列表
+	
+Python有哪几种网页解析器
+	-正则表达式
+	-html.parser python自带模块
+	-Beautiful Soup 第三方插件
+	-lxml 第三方插件
+	
+安装BeautifulSoup
+	-cmd：C:\python27\scripts>目录下输入
+		pip install beautifulsoup4
+		
+网页解析器
+	-html网页
+	-创建beautifulSoup对象
+	-寻找节点find_all find
+	-访问节点名称、属性、文字
+	
+创建beautifulsoup对象
+	from bs4 import BeautifulSoup
+	
+	#根据html网页衣服穿创建BeautifulSoup对象
+	soup = BeautifulSoup(
+				html_doc,				# html文档字符串
+				'html.parser',			# html解析器
+				from_encoding='utf8'	# html文档的编码
+			)
+
+搜索节点(find_all, find)
+	find_all(name, attrs, string)
+		# 包含节点的名称、属性、字符
+	
+	soup.find_all('a')
+		# 查找所有a节点
+		
+	soup.find_all('a', herf='/view/123.htm')
+	soup.find_all('a', herf=re.compile(r'/view/\d+\.html'))
+		# 包含'/view/123.htm'结尾的网页
+	
+	soup.find_all('a', herf='/view/123.htm'， 'python')
+		#包含py
+		
+访问节点信息
+	-得到节点<a href='q.html'>Python</a>
+	-获取查找节点的节点标签名称
+		node.name
+	-获取节点的herf属性
+		node['href']
+	-获取节点的连接文字
+		node.get_text()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

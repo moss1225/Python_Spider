@@ -10,6 +10,7 @@ class UrlManager(object):
     def add_new_url(self, url):
         # 判断新的url是否为空
         if url is None:
+            print("url is none")
             return
         # 判断是否是全新的url，即是否在new_urls或者old_urls中
         if url not in self.new_urls and url not in self.old_urls:
@@ -18,6 +19,7 @@ class UrlManager(object):
     # 添加批量新的url
     def add_new_urls(self, urls):
         if urls is None or len(urls)==0:
+            print("urls is none")
             return
         for url in urls:
             self.add_new_url(url)
